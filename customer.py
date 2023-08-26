@@ -8,6 +8,10 @@ class Customer:
     def family_name(self):
         return self.last_name
     def full_name(self):
-        return self.first_name,self.last_name
+        return f"{self.first_name} {self.last_name}"
+    
+    @classmethod
+    def all(cls):
+        return cls.customers
     
 
