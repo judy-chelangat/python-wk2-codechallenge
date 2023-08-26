@@ -26,19 +26,25 @@ class Review(Customer,Restuarant):
     def review_rating(self):
         return self.rating
     
+    def review_customer(self):
+        return self.first_name
+    
+    def review_restuarant(self):
+        return self.restuarant_name
+    
     @classmethod
     def review_all(cls):
         return cls.all_reviews
-    @classmethod
-    def review_customer(cls):
-        return 
-    def review_restuarant(cls):
-        return 
+   
+   
 
 customer1 = Customer("Judy", "sigilai")
 restuarant1=Restuarant("Frangos")
 
-review1=Review(customer1,restuarant1,6)
-print(review1.review_rating())
+review1=Review(customer1,restuarant1,6) #instance creation
+print(review1.review_rating()) #printing the rating
 
 print(Review.review_all())
+
+print(review1.review_customer().full_name())  # retrieving details from the customer class
+print(review1.review_restuarant().name()) 
