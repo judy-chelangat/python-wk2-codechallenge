@@ -25,6 +25,10 @@ class Restuarant():
     def customers(self): #returns list of unique customers who reviewed the restuarant
         unique_customers=[review.customer() for review in self.reviews] #review.customer is in the review class
         return list(unique_customers)
+ 
+    def avg_restuarant_rating(self):
+        avg_rating=sum(review.rating() for review in self.reviews) / len(self.reviews)
+        return avg_rating
 
 
 restuarant1=Restuarant("Frangos")
