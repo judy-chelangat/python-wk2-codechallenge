@@ -4,6 +4,8 @@ class Customer:
         self.first_name=first_name
         self.last_name=last_name
         self.customers.append(self) #appending each created instance to the list
+
+        self.reviews=[] # used to store each customers review
     def given_name(self): #getter method used to retrieve the name
         return self.first_name
     def family_name(self):
@@ -12,8 +14,18 @@ class Customer:
         return f"{self.first_name} {self.last_name}"
     
     @classmethod #decorator for class method
-    def all(cls): #used to refer to the class itself 
+    def all(cls): #used to refer to the class itself and returns  a list of all customer instances
         return cls.customers
+    def num_reviews(self): # return the total number of reviews by checking the length
+        return len(self.reviews)
+
+    @classmethod
+    def find_by_name(cls,name):
+        for customer in cls.customers: #looping through the list of customers 
+            if customer.full_name() == name:
+                return customer
+    
+
     
 
 customer1 = Customer("Judy", "sigilai")
