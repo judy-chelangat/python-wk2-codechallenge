@@ -31,9 +31,9 @@ class Review():
     def restuarant(self):
         return self.restuarant_name
     
-
-    def review_all(self): #returning all the reviews 
-        return self.all_reviews
+    @classmethod
+    def review_all(cls): #returning all the reviews 
+        return cls.all_reviews
    
    
 
