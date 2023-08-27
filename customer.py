@@ -15,6 +15,7 @@ class Customer:
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
     
+    @classmethod
     def all(cls): #used to refer to the class itself and returns  a list of all customer instances
         return cls.customers
     
