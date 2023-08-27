@@ -31,10 +31,10 @@ class Review():
     def restuarant(self):
         return self.restuarant_name
     
-    @classmethod
-    def review_all(cls):
-        return cls.all_reviews
+
+    def review_all(self): #returning all the reviews 
+        return self.all_reviews
    
    
-   
+
 
