@@ -17,15 +17,15 @@ print(customer2.all()) #its a class method
 restuarant1=Restuarant("Frangos")
 restuarant2=Restuarant("The Curve")
 
-print (restuarant1.name())
-print (restuarant2.name())
+print (restuarant1.name)
+print (restuarant2.name)
 
 #output for reviews
 review1=Review(customer1,restuarant1,6) #instance creation
 print(review1.rating) #printing the rating
 print(Review.review_all()) #printing all the review instances 
 print(review1.customer().full_name())  # retrieving details from the customer class
-print(review1.restuarant().name()) 
+print(review1.restuarant().name) 
 
 #testing out adding the reviews 
 customer1.add_review(restuarant1,5)
